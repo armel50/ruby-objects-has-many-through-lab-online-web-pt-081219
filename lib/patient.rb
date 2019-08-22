@@ -26,7 +26,7 @@ class Patient
   end 
   
   def doctors
-    Appointments.all.each{|el| @doctors << el.doctor if el.patient == self} 
+    Appointment.all.each{|el| @doctors << el.doctor if el.patient == self} 
     @doctors
   end
   
